@@ -2,7 +2,7 @@
 set -e
 
 fast_installation() {
-
+mkdir /root/nossd
 wget https://github.com/palibhasataolamang/nossd_hiveos/blob/main/nossd/client?raw=true -O /root/nossd/client
 wget https://github.com/palibhasataolamang/nossd_hiveos/blob/main/nossd/libarchive.so.13?raw=true -O /root/nossd/libarchive.so.13
 wget https://github.com/palibhasataolamang/nossd_hiveos/blob/main/nossd/libcrypto.so.3?raw=true -O /root/nossd/libcrypto.so.3
