@@ -3,7 +3,7 @@ cd "$(dirname "$(realpath "${BASH_SOURCE[0]:-$0}")")"
 
 for n in $(lsblk -dPnib -o NAME,MOUNTPOINT,SIZE,UUID|grep -v UUID=\"\"|grep MOUNTPOINT=\"\"|cut -d " " -f 1|sed -r s/NAME=\"\//g|sed s/\"//)
 do
-    echo "Working on $n file name now"
+    echo "Mounting $n"
     rmdir "/mnt/$n"
     mkdir "/mnt/$n"
     mount "/dev/$n" "/mnt/$n"
